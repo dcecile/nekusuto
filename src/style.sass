@@ -22,30 +22,22 @@ body > .layout > header
       font-family: 'Coda', monospace
       font-size: 24px
 
-      $logo-size: 32px
-      margin-left: -16px
-      padding-left: 10px
+      $logo-size: 28px
+      margin-left: -26px
+      padding-left: $logo-size + 25px
       padding-right: 20px
+
+      background:
+        image: url(assets/logo.svg)
+        repeat: no-repeat
+        size: $logo-size $logo-size
+        position: 20px center
 
       > h1
         display: inline
         font-family: inherit
         font-size: inherit
         vertical-align: baseline
-
-      > h1::before
-        content: ""
-        display: inline-block
-        vertical-align: text-bottom
-        height: $logo-size
-        width: $logo-size
-        margin-bottom: 2px
-        margin-right: 2px
-        background:
-          image: url(assets/logo.svg)
-          size: 100% 80%
-          repeat: no-repeat
-          position: 50% 50%
 
       > h1::after
         content: "ALPHA"
