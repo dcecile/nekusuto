@@ -1,0 +1,206 @@
+@import color
+@import ~material-design-lite/src/material-design-lite
+
+body
+  margin: 0
+
+body > .layout
+  @extend .mdl-layout
+  @extend .mdl-layout--fixed-header
+
+body > .layout > header
+  @extend .mdl-layout__header
+
+  > .content
+    @extend .mdl-layout__header-row
+
+    > a
+      @extend .mdl-navigation__link
+      display: block
+      color: inherit
+      text-decoration: none
+      font-family: 'Coda', monospace
+      font-size: 24px
+
+      $logo-size: 32px
+      margin-left: -16px
+      padding-left: 10px
+      padding-right: 20px
+
+      > h1
+        display: inline
+        font-family: inherit
+        font-size: inherit
+        vertical-align: baseline
+
+      > h1::before
+        content: ""
+        display: inline-block
+        vertical-align: text-bottom
+        height: $logo-size
+        width: $logo-size
+        margin-bottom: 2px
+        margin-right: 2px
+        background:
+          image: url(assets/logo.svg)
+          size: 100% 80%
+          repeat: no-repeat
+          position: 50% 50%
+
+      > h1::after
+        content: "ALPHA"
+        display: inline
+        vertical-align: super
+        margin-left: 5px
+        font-size: 12px
+
+    > span
+      @extend .mdl-layout-spacer
+
+    > nav
+      @extend .mdl-navigation
+
+      > a
+        @extend .mdl-navigation__link
+        font-family: 'Roboto', sans-serif
+        font-weight: 500
+        font-size: 16px
+
+body > .layout > main
+  @extend .mdl-layout__content
+
+  > .intro
+    padding-top: 76px
+    padding-bottom: 58px
+
+    > p
+      @extend .mdl-color-text--grey-600
+      text-align: center
+      font-family: 'Roboto', sans-serif
+      font-weight: 400
+
+    > p:nth-of-type(1)
+      padding-left: 10%
+      padding-right: 10%
+      font-size: 38px
+      line-height: 1.4
+
+    > p:nth-of-type(2)
+      margin-top: 22px
+      padding-left: 25%
+      padding-right: 25%
+      font-size: 18px
+      line-height: 1.6
+
+  > .details
+    @extend .mdl-color--cyan-200
+    padding-top: 35px
+    padding-bottom: 20px
+    padding-left: 10%
+    padding-right: 10%
+
+    p
+      @extend .mdl-color-text--grey-800
+      text-align: center
+      font-family: 'Roboto', sans-serif
+      font-weight: 600
+
+    > p:nth-of-type(1)
+      font-size: 24px
+
+    > img
+      display: block
+      width: 100%
+
+    > .steps
+      @extend .mdl-grid
+
+      > p
+        @extend .mdl-cell
+        @extend .mdl-cell--4-col
+        @extend .mdl-cell--12-col-tablet
+        padding-left: 10px
+        padding-right: 10px
+        font-size: 18px
+        line-height: 1.6
+
+  > .details:nth-of-type(3)
+    @extend .mdl-color--cyan-100
+
+  > .cost
+    padding-top: 58px
+    padding-bottom: 58px
+    padding-left: 10%
+    padding-right: 10%
+
+    > p
+      @extend .mdl-color-text--grey-800
+      text-align: center
+      font-family: 'Roboto', sans-serif
+      font-weight: 400
+      font-size: 18px
+      line-height: 1.6
+
+    > p:nth-of-type(1)
+      @extend .mdl-color-text--cyan-400
+      font-size: 24px
+      font-weight: 600
+      margin-top: 10px
+
+    > img
+      display: block
+      width: 100%
+
+  > .contact
+    @extend .mdl-color--cyan-200
+    padding-top: 30px
+    padding-bottom: 20px
+    padding-left: 10%
+    padding-right: 10%
+
+    > p
+      @extend .mdl-color-text--white
+      text-align: center
+      font-family: 'Roboto', sans-serif
+      font-weight: 400
+      font-size: 24px
+
+      > a
+        color: inherit
+        font-weight: inherit
+        text-decoration: none
+
+body > .layout > footer
+  @extend .mdl-mini-footer
+  padding: 16px 16px
+
+  > div:nth-of-type(1)
+    @extend .mdl-mini-footer__left-section
+    font-family: 'Coda', monospace
+
+    a
+      font-size: 150%
+
+  > div:nth-of-type(2)
+    @extend .mdl-mini-footer__right-section
+
+  ul
+    @extend .mdl-mini-footer__link-list
+
+form
+  text-align: center
+
+  > .mdl-textfield
+    max-width: 240px
+
+    > input
+      @extend .mdl-color-text--grey-600
+
+    > label
+      text-transform: uppercase
+
+  > button
+    @extend .mdl-button
+    @extend .mdl-button--colored
+    border: 1px solid
+    margin-left: 10px

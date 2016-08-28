@@ -3,9 +3,106 @@
   <head>
     <meta charset="utf-8">
     <title>Nekusuto</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Coda&text=NekusutoALPHA" type="text/css"/>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css"/>
   </head>
   <body>
-    <app></app>
+    <div class="layout">
+
+      <header>
+        <span class="content">
+          <a href="/">
+            <h1 class="title">Nekusuto</h1>
+          </a>
+          <span></span>
+          <nav>
+            <a href="/">Log in</a>
+          </nav>
+        </span>
+      </header>
+
+      <main>
+
+        <section class="intro">
+          <p>Connecting Game Devs and Let’s Players</p>
+          <p>
+            Nekusuto matches great games with great Let’s
+            Players. You get all of the contact and background
+            info you need to start the conversation.
+          </p>
+          <form>
+            <span class="mdl-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="email" id="email1"/>
+              <label class="mdl-textfield__label" for="email1">Email address</label>
+            </span>
+            <button>Receive updates</button>
+          </form>
+        </section>
+
+        <section class="details">
+          <p>How does it work for <em>game devs?</em></p>
+          <img src="src/assets/steps.svg"/>
+          <div class="steps">
+            <p>Select your game’s genres.</p>
+            <p>Nekusuto finds Let’s Players that enjoy playing similar games.</p>
+            <p>You get Twitter handles and recent videos for the top-ranked matches.</p>
+          </div>
+        </section>
+
+        <section class="details">
+          <p>How does it work for <em>Let’s Players?</em></p>
+          <img src="src/assets/steps2.svg"/>
+          <div class="steps">
+            <p>Select your favourite genres.</p>
+            <p>Nekusuto finds game devs actively working on similar games.</p>
+            <p>You get Twitter handles and game details for the top-ranked matches.</p>
+          </div>
+        </section>
+
+        <section class="cost">
+          <img src="src/assets/cost.svg"/>
+          <p>How much does it cost?</p>
+          <p>
+            Free for game devs with less than 500 Steam reviews.
+          </p>
+          <p>
+            Free for Let’s Players with less than 5000 Youtube subscribers.
+          </p>
+          <p>
+            Others: let’s chat and see what’s fair.
+          </p>
+          <form>
+            <span class="mdl-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="email" id="email2"/>
+              <label class="mdl-textfield__label" for="email2">Email address</label>
+            </span>
+            <button>Receive updates</button>
+          </form>
+        </section>
+
+        <section class="contact">
+          <p><a href="mailto:dancecile@gmail.com">Questions? Email dancecile@gmail.com</a></p>
+        </section>
+
+      </main>
+
+      <footer>
+        <div>
+          <ul>
+            <li><a href="/" class="title">Nekusuto</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><a href="/">Support</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Contact</a></li>
+          </ul>
+        </ul>
+      </footer>
+
+      <app></app>
+
+    </div>
   </body>
 </html>
