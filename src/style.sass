@@ -71,13 +71,13 @@ body > .layout > main
       font-family: 'Roboto', sans-serif
       font-weight: 400
 
-    > p:nth-of-type(1)
+    > p:first-of-type
       padding-left: 10%
       padding-right: 10%
       font-size: 38px
       line-height: 1.4
 
-    > p:nth-of-type(2)
+    > p:last-of-type
       margin-top: 22px
       padding-left: 25%
       padding-right: 25%
@@ -85,7 +85,6 @@ body > .layout > main
       line-height: 1.6
 
   > .details
-    @extend .mdl-color--cyan-200
     padding-top: 35px
     padding-bottom: 20px
     padding-left: 10%
@@ -97,7 +96,7 @@ body > .layout > main
       font-family: 'Roboto', sans-serif
       font-weight: 600
 
-    > p:nth-of-type(1)
+    > p:first-of-type
       font-size: 24px
 
     > img
@@ -116,10 +115,15 @@ body > .layout > main
         font-size: 18px
         line-height: 1.6
 
-  > .details:nth-of-type(3)
+  > .details-1
+    @extend .details
+    @extend .mdl-color--cyan-200
+
+  > .details-2
+    @extend .details
     @extend .mdl-color--cyan-100
 
-  > .cost
+  > .go
     padding-top: 58px
     padding-bottom: 58px
     padding-left: 10%
@@ -133,7 +137,7 @@ body > .layout > main
       font-size: 18px
       line-height: 1.6
 
-    > p:nth-of-type(1)
+    > p:first-of-type
       @extend .mdl-color-text--cyan-400
       font-size: 24px
       font-weight: 600
@@ -162,18 +166,23 @@ body > .layout > main
         font-weight: inherit
         text-decoration: none
 
+    > p:last-of-type
+      margin-top: 28px
+      font-style: italic
+      font-size: 16px
+
 body > .layout > footer
   @extend .mdl-mini-footer
   padding: 16px 16px
 
-  > div:nth-of-type(1)
+  > div:first-of-type
     @extend .mdl-mini-footer__left-section
     font-family: 'Coda', monospace
 
     a
       font-size: 150%
 
-  > div:nth-of-type(2)
+  > div:last-of-type
     @extend .mdl-mini-footer__right-section
 
   ul
