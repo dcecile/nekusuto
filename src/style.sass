@@ -3,6 +3,7 @@
 
 body
   margin: 0
+  font-family: 'Roboto', sans-serif
 
 body > .layout
   @extend .mdl-layout
@@ -10,6 +11,12 @@ body > .layout
 
 body > .layout > header
   @extend .mdl-layout__header
+  @extend .mdl-color--white
+  @extend .mdl-color-text--cyan-400
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
 
   > .content
     @extend .mdl-layout__header-row
@@ -24,11 +31,11 @@ body > .layout > header
 
       $logo-size: 28px
       margin-left: -26px
-      padding-left: $logo-size + 25px
+      padding-left: $logo-size + 28px
       padding-right: 20px
 
       background:
-        image: url(assets/logo.svg)
+        image: url(assets/favicon.svg)
         repeat: no-repeat
         size: $logo-size $logo-size
         position: 20px center
@@ -54,50 +61,62 @@ body > .layout > header
 
       > a
         @extend .mdl-navigation__link
-        font-family: 'Roboto', sans-serif
         font-weight: 500
         font-size: 16px
+        color: inherit
 
 body > .layout > main
   @extend .mdl-layout__content
+  @extend .mdl-color--cyan-400
 
   > .intro
-    padding-top: 76px
-    padding-bottom: 58px
+    $header-height: 64px
+    background:
+      image: url(assets/motif.svg)
+      size: 600px 600px
+      position: 50% $header-height
+      $grey: 247
+    box-sizing: border-box
+    min-height: 95vh
+    padding-top: $header-height + 30px
+    padding-bottom: 30px
+    display: flex
+    flex-direction: column
+    justify-content: center
 
     > p
-      @extend .mdl-color-text--grey-600
+      @extend .mdl-color-text--white
       text-align: center
-      font-family: 'Roboto', sans-serif
       font-weight: 400
 
     > p:first-of-type
-      padding-left: 10%
-      padding-right: 10%
-      font-size: 38px
+      padding-left: 15%
+      padding-right: 15%
+      font-size: 46px
+      font-weight: 600
       line-height: 1.4
 
     > p:last-of-type
-      margin-top: 22px
+      margin-top: 36px
       padding-left: 25%
       padding-right: 25%
-      font-size: 18px
+      font-size: 24px
       line-height: 1.6
 
   > .details
-    padding-top: 35px
-    padding-bottom: 20px
+    @extend .mdl-color-text--cyan-400
+    padding-top: 80px
+    padding-bottom: 60px
     padding-left: 10%
     padding-right: 10%
 
     p
-      @extend .mdl-color-text--grey-800
       text-align: center
-      font-family: 'Roboto', sans-serif
       font-weight: 600
 
     > p:first-of-type
-      font-size: 24px
+      font-size: 32px
+      margin-bottom: 40px
 
     > img
       display: block
@@ -117,31 +136,26 @@ body > .layout > main
 
   > .details-1
     @extend .details
-    @extend .mdl-color--cyan-200
+    @extend .mdl-color--cyan-50
 
   > .details-2
     @extend .details
-    @extend .mdl-color--cyan-100
+    @extend .mdl-color--white
 
   > .go
-    padding-top: 58px
-    padding-bottom: 58px
+    @extend .intro
+    padding-top: 30px
+    min-height: 65vh
     padding-left: 10%
     padding-right: 10%
-
-    > p
-      @extend .mdl-color-text--grey-800
-      text-align: center
-      font-family: 'Roboto', sans-serif
-      font-weight: 400
-      font-size: 18px
-      line-height: 1.6
+    background-position: 50% 50%
 
     > p:first-of-type
-      @extend .mdl-color-text--cyan-400
-      font-size: 24px
-      font-weight: 600
-      margin-top: 10px
+      font-size: 32px
+      margin-top: 20px
+
+    > p:last-of-type
+      margin-top: 20px
 
     > img
       display: block
@@ -155,9 +169,8 @@ body > .layout > main
     padding-right: 10%
 
     > p
-      @extend .mdl-color-text--white
+      @extend .mdl-color-text--cyan-800
       text-align: center
-      font-family: 'Roboto', sans-serif
       font-weight: 400
       font-size: 24px
 
@@ -190,18 +203,21 @@ body > .layout > footer
 
 form
   text-align: center
+  margin-top: 30px
 
   > .mdl-textfield
     max-width: 240px
 
     > input
-      @extend .mdl-color-text--grey-600
+      @extend .mdl-color-text--white
+      border-color: white
 
     > label
+      @extend .mdl-color-text--grey-100
       text-transform: uppercase
 
   > button
     @extend .mdl-button
-    @extend .mdl-button--colored
-    border: 1px solid
+    @extend .mdl-color-text--white
+    border: 1px solid white
     margin-left: 10px
